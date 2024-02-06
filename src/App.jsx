@@ -13,7 +13,7 @@ function App() {
   const location = useLocation()
   console.log(location)
   return (
-    <div className='h-screen bg-gradient-to-b from-blue-600 to-indigo-600'>
+    <div className='h-screen'>
       <AnimatedCursor
         innerSize={8}
         outerSize={32}

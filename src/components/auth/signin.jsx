@@ -1,18 +1,25 @@
 import React, { useState } from 'react'
 import { auth } from '../../firebase'
 import { signInWithEmailAndPassword } from 'firebase/auth'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { setUser } from '../store/authslice'
 function SignIn() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+
 
     const handleLogin = (e) => {
         e.preventDefault()
         console.log('Email:', email)
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                // const user = userCredential.user
+                const user = userCredential.user
                 console.log('User:', userCredential)
+                dispatch(setUser(email))
+                navigate('/')
             })
             .catch((error) => {
                 const errorCode = error.code
