@@ -1,5 +1,7 @@
 'use client'
 
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useEffect, useState } from "react"
 
 export default function Themeswitcher() {
@@ -24,7 +26,11 @@ export default function Themeswitcher() {
     }, [darkMode])
     return (
         <div onClick={() => setDarkMode(!darkMode)} className="bg-white text-black dark:bg-black dark:text-white">
-                {darkMode ? 'Dark' : 'Light'}
+            {
+                darkMode ?
+                    <FontAwesomeIcon icon={faMoon} /> :
+                    <FontAwesomeIcon icon={faSun} />
+            }
         </div>
     )
 }
