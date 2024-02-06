@@ -13,7 +13,7 @@ function App() {
   const location = useLocation()
   console.log(location)
   return (
-    <div className='h-screen bg-gradient-to-b from-purple-600 to-indigo-600'>
+    <div className='h-screen bg-gradient-to-b from-blue-600 to-indigo-600'>
       <AnimatedCursor
         innerSize={8}
         outerSize={32}
@@ -23,7 +23,6 @@ function App() {
         outerScale={5}
       // trailingSpeed={1}
       />
-      <Navbar />
       {
         location.pathname === "/" ? (
           <Home />

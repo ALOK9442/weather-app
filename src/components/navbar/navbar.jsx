@@ -1,10 +1,14 @@
 import React from 'react'
-import Themeswitcher from '../themeswitcher/themeswitcher'
+import { useSelector } from 'react-redux'
 
 function Navbar() {
+
+    const signedIn = useSelector(state => state.auth.signedIn)
     return (
         <div>
-            <Themeswitcher />
+            <p>
+                
+            </p>
         </div>
     )
 }

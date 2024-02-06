@@ -1,8 +1,11 @@
 import React from 'react'
+import Navbar from '../navbar/navbar'
 
 function UserTable() {
   return (
-    <div>UserTable</div>
+    <div>
+      <Navbar />
+    </div>
   )
 }
 

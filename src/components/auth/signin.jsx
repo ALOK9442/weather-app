@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import {auth} from '../../firebase'
+import { auth } from '../../firebase'
 import { signInWithEmailAndPassword } from 'firebase/auth'
+import { Link } from 'react-router-dom'
 function SignIn() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -21,21 +22,24 @@ function SignIn() {
             })
     }
     return (
-        <div>
-            <form onSubmit={handleLogin}>
-                <h3 className='bg-amber-500 text-black dark:bg-black dark:text-white'>Sign In</h3>
+        <div className='flex flex-col h-screen items-center justify-center'>
+            <form onSubmit={handleLogin} className='flex flex-col rounded-md items-center border-2 h-screen p-8 space-y-6 sm:w-1/2 w-full'>
+                <h3 className='font-mono text-4xl p-4 items-center justify-center w-fit rounded-md m-4'>Sign In</h3>
                 <input
                     type="text"
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    className='w-full border-2 p-2 rounded-md'
                 />
                 <input type="password"
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    className='w-full border-2 p-2 rounded-md'
                 />
-                <button type="submit">Sign In</button>
+                <button type="submit" className='w-full border-2 p-4 hover:bg-red-300 rounded-md bottom-0'>Sign In</button>
+                <p className='font-mono'>Don't have an account? <Link to='/signup' className='text-black'>Sign Up</Link></p>
             </form>
         </div>
     )
