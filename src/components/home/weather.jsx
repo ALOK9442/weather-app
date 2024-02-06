@@ -38,7 +38,7 @@ function Weather() {
         </button>
       </div>
       {
-        isLoading ? <div>Loading...</div>
+        isLoading ? <div className='flex items-center justify-center text-4xl font-mono text-black'>Loading...</div>
           :
           <div>
             <div className='flex flex-col items-center'>
@@ -62,10 +62,12 @@ function Weather() {
                   <p className='sm:text-lg font-mono text-white'>{currentWeather.current.condition.text}</p>
                 </div>
               </div>
+
+
               <div className="bg-blue-500 flex-col text-white w-fit h-fit rounded-md p-4 flex items-center">
                 <p className='pr-3 font-mono text-3xl'>AIR CONDITIONS</p>
               </div>
-              <div className='md:flex items-center space-y-4 justify-around pt-4 pb-4 w-full'>
+              <div className='md:flex items-center space-y-6 justify-around pt-4 pb-4 w-full'>
                 <div className='flex flex-col space-y-1 items-center'>
                   <p className='font-mono sm:text-lg text-white'>Feels like</p>
                   <p className='text-mono font-semibold text-white'>

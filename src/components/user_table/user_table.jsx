@@ -52,7 +52,7 @@ function UserTable() {
   return (
     <div className='flex flex-col items-center justify-center w-full'>
       <h1 className='font-mono text-4xl p-4 items-center justify-center w-fit rounded-md m-4'>Active Users</h1>
-      <table className='table-auto border-2'>
+      <table className='table-auto border-2 w-full'>
         <thead>
           <tr>
             <th className='border-2'>UserName</th>
@@ -71,7 +71,7 @@ function UserTable() {
                   <FontAwesomeIcon icon={faCircle} />
                 </span>
               </td>
-              <td className='border-2'>
+              <td className='border-2 flex items-center justify-center'>
                 <button onClick={() => deleteUser(user.id)} className='bg-red-500 hover:bg-red-700 text-white font-mono py-2 px-4 rounded mr-2'>
                   Delete
                 </button>
