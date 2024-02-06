@@ -25,11 +25,11 @@ export default function Themeswitcher() {
         }
     }, [darkMode])
     return (
-        <div onClick={() => setDarkMode(!darkMode)} className="bg-white text-black dark:bg-black dark:text-white">
+        <div onClick={() => setDarkMode(!darkMode)} className="top-16 right-2 rounded-md absolute sm:absolute sm:top-4 sm:right-4 p-3 bg-white text-black dark:bg-black dark:text-white">
             {
                 darkMode ?
-                    <FontAwesomeIcon icon={faMoon} /> :
-                    <FontAwesomeIcon icon={faSun} />
+                    <FontAwesomeIcon icon={faMoon} className="sm:w-6 sm:h-6" /> :
+                    <FontAwesomeIcon icon={faSun} className="sm:w-6 sm:h-6" />
             }
         </div>
     )

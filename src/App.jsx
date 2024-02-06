@@ -5,15 +5,15 @@ import './App.css'
 import SignIn from './components/auth/signin'
 import Navbar from './components/navbar/navbar'
 import { Outlet, useLocation } from 'react-router-dom'
-import Home from './components/home/weather'
 import AnimatedCursor from 'react-animated-cursor'
+import Home from './components/home/home'
 
 function App() {
   const [count, setCount] = useState(0)
   const location = useLocation()
   console.log(location)
   return (
-    <div className='h-screen'>
+    <div className='h-screen bg-gradient-to-b from-purple-600 to-indigo-600'>
       <AnimatedCursor
         innerSize={8}
         outerSize={32}
