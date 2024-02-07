@@ -22,7 +22,7 @@ const initialState = {
         },
         {
             id: 4,
-            name: 'Rohit Sharma',
+            name: 'Aohit Sharma',
             status: 'active',
             addedDate: '2022-12-11'
         },

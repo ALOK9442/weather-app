@@ -72,7 +72,7 @@ function UserTable() {
         <thead>
           <tr>
             <th className='border-2 cursor-pointer' onClick={() => handleSort('name')}>UserName</th>
-            <th className='border-2 cursor-pointer' onClick={() => handleSort('addedDate')}>Added Date</th>
+            <th className='border-2 cursor-pointer' onClick={() => handleSort('addedDate')}>Joining Date</th>
             <th className='border-2'>Status</th>
             <th className='border-2'>Actions</th>
           </tr>
