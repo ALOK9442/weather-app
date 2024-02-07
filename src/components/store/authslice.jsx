@@ -52,23 +52,9 @@ const authSlice = createSlice({
             state.isAuthenticated = false
             state.status = "inactive"
         },
-        addUser: (state, action) => {
-            state.push(action.payload);
+        setStatus(state, action) {
+            state.status = action.payload
         },
-        deleteUser: (state, action) => {
-            return state.filter(user => user.id !== action.payload);
-        },
-        updateUserStatus: (state, action) => {
-            return state.map(user => {
-                if (user.id === action.payload.id) {
-                    return { ...user, status: action.payload.status };
-                }
-                return user;
-            });
-        },
-        selectUser: (state, action) => {
-            return state.users;
-        }
     }
 })
 
