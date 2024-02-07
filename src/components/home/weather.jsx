@@ -44,7 +44,7 @@ function Weather() {
             <div className='flex flex-col items-center'>
               <span className='bg-blue-500 text-white w-fit h-fit rounded-md p-4 flex items-center font-mono text-3xl'>CURRENT WEATHER</span>
               <div className='flex items-center justify-around pt-4 pb-4 w-full'>
-                <div className='flex flex-col items-center p-2 space-y-4'>
+                <div className='flex flex-col items-center p-2 space-y-2'>
                   <p className='font-semibold flex items-center text-mono sm:text-lg text-white'>
                     <img src={humidity} className='w-4 h-4'/>
                     Humidity
@@ -53,7 +53,7 @@ function Weather() {
                     {currentWeather.current.humidity}%
                   </p>
                 </div>
-                <div className='flex flex-col items-center p-2 space-y-4'>
+                <div className='flex flex-col items-center p-2 space-y-2'>
                   <p className='font-bold sm:text-lg text-white'>{currentWeather.location.name}</p>
                   <p className='text-md font-medium text-white'>{currentWeather.location.localtime}</p>
                 </div>
@@ -83,7 +83,7 @@ function Weather() {
                     {currentWeather.current.gust_kph} kph
                   </p>
                 </div>
-                <div className='flex flex-col items-center p-2 space-y-4'>
+                <div className='flex flex-col items-center p-2 space-y-2'>
                   <p className='font-semibold text-mono sm:text-lg text-white'>
                     Clouds
                   </p>
